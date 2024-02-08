@@ -522,8 +522,14 @@ internal object MessageMaker {
             face.stickerType = 3
             face.randomType = 1
             face.resultId = data["result"].asStringOrNull ?: Random.nextInt(1 .. 5).toString()
-        } else if (serverId == 392 || serverId == 393) {
-            face.stickerId = 40.toString()
+        } else if (serverId == 393) {
+            face.stickerId = 39.toString()
+            face.packId = "1"
+            face.sourceType = 1
+            face.stickerType = 3
+            face.randomType = 1
+        } else if (serverId == 393) {
+            face.stickerId = 38.toString()
             face.packId = "1"
             face.sourceType = 1
             face.stickerType = 3
