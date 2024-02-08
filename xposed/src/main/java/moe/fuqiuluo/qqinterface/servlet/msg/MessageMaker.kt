@@ -501,7 +501,7 @@ internal object MessageMaker {
         data.checkAndThrow("id")
 
         val serverId = data["id"].asInt
-        val big = (data["big"].asBooleanOrNull ?: false) || serverId == 394
+        val big = (data["big"].asBooleanOrNull ?: false) || serverId == 394 || serverId == 393 || serverId == 392
 
         val elem = MsgElement()
         elem.elementType = MsgConstant.KELEMTYPEFACE
@@ -522,6 +522,12 @@ internal object MessageMaker {
             face.stickerType = 3
             face.randomType = 1
             face.resultId = data["result"].asStringOrNull ?: Random.nextInt(1 .. 5).toString()
+        } else if (serverId == 392 || serverId == 393) {
+            face.stickerId = 40.toString()
+            face.packId = "1"
+            face.sourceType = 1
+            face.stickerType = 3
+            face.randomType = 1
         } else if (big) {
             face.imageType = 0
             face.stickerId = 30.toString()
