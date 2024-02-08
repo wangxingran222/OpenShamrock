@@ -528,7 +528,7 @@ internal object MessageMaker {
             face.sourceType = 1
             face.stickerType = 3
             face.randomType = 1
-        } else if (serverId == 393) {
+        } else if (serverId == 392) {
             face.stickerId = 38.toString()
             face.packId = "1"
             face.sourceType = 1
